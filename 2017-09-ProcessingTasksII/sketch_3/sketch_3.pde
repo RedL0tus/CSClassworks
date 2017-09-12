@@ -28,10 +28,10 @@ void setup(){
   targetOuter = color(#FF0000); // Target outer color
   /* Finish Customization */
   
-  if (targetRandomColor){
+  if (targetRandomColor){ // Prevent the circle be invisible
     circle = color(random(0,255),random(0,255),random(0,255));
     target = color(random(0,255),random(0,255),random(0,255));
-    while ((circle == bg) || (circle == target) || (target == bg)){ // Prevent the circle is the same color as the background.
+    while ((circle == bg) || (circle == target) || (target == bg)){
       circle = color(random(0,255),random(0,255),random(0,255));
       target = color(random(0,255),random(0,255),random(0,255));
     }
