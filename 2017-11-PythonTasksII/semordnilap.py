@@ -5,20 +5,20 @@
 def get_semordnilap(filename):
     """Find semordnilap words inside the given file"""
     semordnilap_list = []
+    wordlist = []
     file = open(filename)
     for line in file:
-        if is_semordnilap(line, filename):
+        wordlist.append(line.strip())
+    for line in wordlist:
+        if is_semordnilap(line, wordlist):
             semordnilap_list.append(line.strip())
     return semordnilap_list
 
-def is_semordnilap(word, filename):
+def is_semordnilap(word, wordlist):
     """Determine whether the word is a semordnilap or not."""
-    wordlist = open(filename)
     word_reversed = word.strip()[::-1]
-    for line in wordlist:
-        if line.strip() == word_reversed:
-            return True
+    if word_reversed in wordlist:
+        return True
     return False
 
 print(get_semordnilap('words.txt'))
-#print(is_semordnilap("abcdef",["fedcba"]))
