@@ -8,12 +8,14 @@ Copyright (C) 2017 Ken Wang <RedL0tus@noreply.github.com>
 
 class Words:
     """Class of words processing."""
-    wordlist = []
+    wordlist = {}
     def __init__(self, filename):
         try:
             self.file = open(filename)
+            temp = []
             for line in self.file:
-                self.wordlist.append(line.strip())
+                temp.append(line.strip())
+            self.wordlist = set(temp)
         except IOError:
             print("Failed to open wordlist file.")
 
