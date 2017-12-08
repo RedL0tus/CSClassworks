@@ -86,7 +86,7 @@ class Words:
     def get_anagrams(self):
         """Print anagrams."""
         anagrams_list = self.sort_letters()
-        for key in list():
+        for key in list(anagrams_list):
             if len(anagrams_list[key]) < 2:
                 del anagrams_list[key]
         return anagrams_list
