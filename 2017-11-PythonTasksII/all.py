@@ -70,6 +70,27 @@ class Words:
         else:
             return False
 
+    def sort_letters(self):
+        """Sort letters by letters they contains"""
+        dictionary = dict()
+        for word in self.wordlist:
+            key = list(word)
+            key.sort()
+            key = "".join(key)
+            if key not in dictionary:
+                dictionary[key] = [word]
+            else:
+                dictionary[key].append(word)
+        return dictionary
+
+    def get_anagrams(self):
+        """Print anagrams."""
+        anagrams_list = self.sort_letters()
+        for key in list():
+            if len(anagrams_list[key]) < 2:
+                del anagrams_list[key]
+        return anagrams_list
+
 if __name__ == "__main__":
     print(">>> Reading wordlist.")
     WORDS = Words("words.txt")
@@ -77,6 +98,8 @@ if __name__ == "__main__":
     print(WORDS.get_triple_double())
     print(">>> Getting palindrome words...")
     print(WORDS.get_palindromes())
-    print(">>> Getting semordnilap words (this may take a while)...")
+    print(">>> Getting semordnilap words...")
     print(WORDS.get_semordnilaps())
+    print(">>> Getting anagrams...")
+    print(WORDS.get_anagrams())
     print("Done.")
