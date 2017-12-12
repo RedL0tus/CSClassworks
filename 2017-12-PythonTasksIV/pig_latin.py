@@ -17,10 +17,11 @@ def pig_latin(word):
             if word == temp:
                 begin_with_vowel = True
         begin_with_digraph = False
-        if begin_with_vowel is False:
-            for temp in ["ch", "sh", "th", "Ch", "Sh", "Th"]:
-                if (word[0] + word[1]) == temp:
-                    begin_with_digraph = True
+        if len(word) > 1:
+            if begin_with_vowel is False:
+                for temp in ["ch", "sh", "th", "Ch", "Sh", "Th"]:
+                    if (word[0] + word[1]) == temp:
+                        begin_with_digraph = True
         result = ""
         if begin_with_vowel:
             result = word + "ay"
