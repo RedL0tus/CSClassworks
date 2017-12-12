@@ -7,7 +7,7 @@ import sys
 def pig_latin(word):
     """Translate english words into Pig Latin."""
     try:
-        exceptions = ["honor","honest"]
+        exceptions = ["honor", "honest"]
         for temp in ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]:
             if word[0] == temp:
                 begin_with_vowel = True
