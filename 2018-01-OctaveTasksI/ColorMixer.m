@@ -1,0 +1,1 @@
+function [] = ColorMixer(str) I = imread("nvidia-linus.jpg"); idxs = [1:3]; temp = {}; for i = 3:-1:1  idx = ceil(i*rand());  temp{i} = I(:,:,idxs(idx));  idxs(idx) = []; end for i = 1:3 I(:,:,i) = temp{i}; end  imshow(I);end

@@ -1,0 +1,1 @@
+function total = Yield(M,b)total = 10000;for i = 1:12total = total*M(b(i),i+1)/M(b(i),i);endend

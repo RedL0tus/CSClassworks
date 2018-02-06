@@ -1,0 +1,1 @@
+function [] = MultiPlot(M)x = 0:12;plot(x,M(1,:),'r',x,M(2,:),'m',x,M(3,:),'g',x,M(4,:),'c',x,M(5,:),'b',...x,M(6,:),'r--',x,M(7,:),'m--',x,M(8,:),'g--',x,M(9,:),'c--',x,M(10,:),'b--');legend('Business 1','Business 2','Business 3','Business 4','Business 5',...'Business 6','Business 7','Business 8','Business 9','Business 10','Location',...'NorthWest');end
