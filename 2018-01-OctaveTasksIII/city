@@ -1,0 +1,13 @@
+# Created by Octave 4.2.1, Tue Feb 06 14:23:16 2018 PST <ken@X220>
+# name: city
+# type: matrix
+# rows: 8
+# columns: 2
+ 20 30
+ 20 70
+ 50 40
+ 50 10
+ 80 80
+ 90 60
+ 60 60
+ 40 90
