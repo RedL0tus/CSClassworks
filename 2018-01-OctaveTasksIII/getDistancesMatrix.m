@@ -1,4 +1,4 @@
-function ans = getDistances(city)
+function ans = getDistancesMatrix(city)
 	#city = zeros(8,2);
 	#city(1,:) = [ 20 30 ];
 	#city(2,:) = [ 20 70 ];
